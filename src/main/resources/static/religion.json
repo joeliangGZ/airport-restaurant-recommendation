@@ -1,50 +1,43 @@
 [
   {
-    "religion": "基督教",
     "airport": "广州白云国际机场",
-    "boardingGate": "1",
+    "boardingGate": "01",
     "departureTime": "2025-06-01T09:00:00",
     "userName": "Alice Smith"
   },
   {
-    "religion": "伊斯兰教",
     "airport": "广州白云国际机场",
-    "boardingGate": "2",
+    "boardingGate": "02",
     "departureTime": "2025-07-15T22:45:00",
     "userName": "Ahmed Al-Mansoori"
   },
   {
-    "religion": "印度教",
     "airport": "广州白云国际机场",
-    "boardingGate": "3",
+    "boardingGate": "03",
     "departureTime": "2025-08-10T06:20:00",
     "userName": "Priya Patel"
   },
   {
-    "religion": "佛教",
     "airport": "广州白云国际机场",
-    "boardingGate": "1",
+    "boardingGate": "01",
     "departureTime": "2025-09-05T14:30:00",
     "userName": "Thanawat Chaiyaporn"
   },
   {
-    "religion": "锡克教",
     "airport": "广州白云国际机场",
-    "boardingGate": "2",
+    "boardingGate": "02",
     "departureTime": "2025-10-12T13:15:00",
     "userName": "Navdeep Singh"
   },
   {
-    "religion": "犹太教",
     "airport": "广州白云国际机场",
-    "boardingGate": "3",
+    "boardingGate": "03",
     "departureTime": "2025-11-20T18:00:00",
     "userName": "David Cohen"
   },
   {
-    "religion": "道教",
     "airport": "广州白云国际机场",
-    "boardingGate": "1",
+    "boardingGate": "01",
     "departureTime": "2025-12-25T07:45:00",
     "userName": "林美华"
   }

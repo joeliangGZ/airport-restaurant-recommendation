@@ -31,12 +31,9 @@ public class BoardingPassService {
         // LocalDateTime departureTime = parseDepartureTime(ocrResult);
         // String userName = parseUserName(ocrResult);
 
-
-        // 仅当资源在文件系统（非压缩 JAR）中时，getFile() 有效
-
         try {
             List<BoardingPassInfo> list = loadBoardingPassList();
-            return findByImageNamePrefixOptional(list, imageName).orElse(null);
+            return findByImageNamePrefixOptional(list, imageName);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
         }
@@ -49,17 +46,9 @@ public class BoardingPassService {
         return mapper.readValue(resource.getInputStream(), new TypeReference<List<BoardingPassInfo>>() {});
     }
 
-    private Optional<BoardingPassInfo> findByImageNamePrefixOptional(List<BoardingPassInfo> list, String imageName) {
-        if (imageName == null) {
-            return Optional.empty();
-        }
-        String prefix = extractPrefix(imageName);
-        return list.stream()
-                .filter(info -> prefix.equals(info.getUserName()))
-                .findFirst();
-    }
-
-    private String extractPrefix(String imageName) {
-        return StringUtils.stripFilenameExtension(imageName);
+    private BoardingPassInfo findByImageNamePrefixOptional(List<BoardingPassInfo> list, String imageName) {
+        int hash = imageName.hashCode();
+        int index = Math.floorMod(hash, list.size());
+        return list.get(index);
     }
 }
