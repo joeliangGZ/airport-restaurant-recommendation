@@ -14,6 +14,7 @@ public class BoardingPassInfo {
 
     private String religion;
     private String airport;
+    private String boardingGate;
     private LocalDateTime departureTime;
     private String userName;
 
